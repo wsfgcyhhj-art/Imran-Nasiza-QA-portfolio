@@ -22,7 +22,16 @@ const SITE = {
   },
 
   // ─── СТАТИСТИКА В HERO ───────────────────────────────────────
-  stats: [
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  1stats: [
     { value: 50, suffix: "+", label: "Найдено багов"   },
     { value:  3, suffix: "+", label: "Проекта"         },
     { value:  7, suffix: "+", label: "QA инструментов" },
