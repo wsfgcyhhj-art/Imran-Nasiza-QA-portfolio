@@ -6,19 +6,19 @@
 const SITE = {
 
   // ─── ЛИЧНОЕ ──────────────────────────────────────────────────
-  name:     "Имран Насиза",
+  name:     "ИМРАН НАСИЗА",
   initials: "ИН",
-  roles:    ["QA Engineer", "Manual Tester", "API Tester", "Automation Engineer"],
-  tagline:  "Нахожу баги до того, как их найдут пользователи.",
+  roles:    ["QA ENGINEER", "MANUAL TESTER", "API TESTER", "AUTOMATION ENGINEER"],
+  tagline:  "НАХОЖУ БАГИ ДО ТОГО, КАК ИХ НАЙДУТ ПОЛЬЗОВАТЕЛИ.",
   avatar:   "",        // ← вставь URL фото (https://...) или оставь "" → покажется плейсхолдер
   cv:       "#",       // ← ссылка на PDF резюме
 
   // ─── СОЦСЕТИ ─────────────────────────────────────────────────
   social: {
     telegram: "https://t.me/imran_wxz",
-    github:   "#",
+    github:   "https://github.com/wsfgcyhhj-art",
     linkedin: "#",
-    email:    "mailto:your@email.com",
+    email:    "mailto:wsfgcyhhj@gmail.com",
   },
 
   // ─── СТАТИСТИКА В HERO ───────────────────────────────────────
@@ -31,68 +31,68 @@ const SITE = {
   
   
   
-  1stats: [
-    { value: 50, suffix: "+", label: "Найдено багов"   },
-    { value:  3, suffix: "+", label: "Проекта"         },
-    { value:  7, suffix: "+", label: "QA инструментов" },
+  stats: [
+    { value: 50, suffix: "+", label: "НАЙДЕНО БАГОВ"   },
+    { value:  3, suffix: "+", label: "ПРОЕКТА"         },
+    { value:  7, suffix: "+", label: "QA ИНСТРУМЕНТОВ" },
   ],
 
   // ─── БЕГУЩАЯ СТРОКА (MARQUEE) ────────────────────────────────
   ticker: [
-    "Manual QA","API Testing","PyTest","Postman","SQL",
-    "Playwright","DevTools","CI/CD","Regression","Smoke",
-    "Bug Report","Test Case","Checklist","Jira","Swagger",
-    "Cross-browser","Mobile Testing","Test Design","Selenium",
+    "MANUAL QA","API TESTING","PYTEST","POSTMAN","SQL",
+    "PLAYWRIGHT","DEVTOOLS","CI/CD","REGRESSION","SMOKE",
+    "BUG REPORT","TEST CASE","CHECKLIST","JIRA","SWAGGER",
+    "CROSS-BROWSER","MOBILE TESTING","TEST DESIGN","SELENIUM",
   ],
 
   // ─── НАВЫКИ (6 карточек) ─────────────────────────────────────
   skills: [
     {
       icon:  "search",
-      title: "Manual QA",
-      desc:  "Функциональное, исследовательское и регрессионное тестирование web и mobile продуктов",
+      title: "MANUAL QA",
+      desc:  "ФУНКЦИОНАЛЬНОЕ, ИССЛЕДОВАТЕЛЬСКОЕ И РЕГРЕССИОННОЕ ТЕСТИРОВАНИЕ WEB И MOBILE ПРОДУКТОВ",
     },
     {
       icon:  "api",
-      title: "API Testing",
-      desc:  "Postman, Swagger, контрактные сценарии, статус-коды и валидация схем ответов",
+      title: "API TESTING",
+      desc:  "POSTMAN, SWAGGER, КОНТРАКТНЫЕ СЦЕНАРИИ, СТАТУС-КОДЫ И ВАЛИДАЦИЯ СХЕМ ОТВЕТОВ",
     },
     {
       icon:  "bot",
-      title: "Automation",
-      desc:  "Smoke-сценарии на PyTest и Playwright, CI-ready пайплайны и GitHub Actions",
+      title: "AUTOMATION",
+      desc:  "SMOKE-СЦЕНАРИИ НА PYTEST И PLAYWRIGHT, CI-READY ПАЙПЛАЙНЫ И GITHUB ACTIONS",
     },
     {
       icon:  "db",
       title: "SQL",
-      desc:  "Написание запросов, проверка данных в БД, поиск аномалий и дублей",
+      desc:  "НАПИСАНИЕ ЗАПРОСОВ, ПРОВЕРКА ДАННЫХ В БД, ПОИСК АНОМАЛИЙ И ДУБЛЕЙ",
     },
     {
       icon:  "devtools",
-      title: "DevTools",
-      desc:  "Анализ сети, консоль, storage, перехват и проверка запросов в браузере",
+      title: "DEVTOOLS",
+      desc:  "АНАЛИЗ СЕТИ, КОНСОЛЬ, STORAGE, ПЕРЕХВАТ И ПРОВЕРКА ЗАПРОСОВ В БРАУЗЕРЕ",
     },
     {
       icon:  "loop",
-      title: "Regression",
-      desc:  "Чек-листы, баг-репорты, тест-дизайн, тест-кейсы и smoke-прогоны перед релизом",
+      title: "REGRESSION",
+      desc:  "ЧЕК-ЛИСТЫ, БАГ-РЕПОРТЫ, ТЕСТ-ДИЗАЙН, ТЕСТ-КЕЙСЫ И SMOKE-ПРОГОНЫ ПЕРЕД РЕЛИЗОМ",
     },
   ],
 
   // ─── ОБО МНЕ ─────────────────────────────────────────────────
   about: {
-    title: "Обо мне",
-    bio:   "Специализируюсь на ручном тестировании, API-проверках и автоматизации дымовых сценариев. Быстро нахожу слабые места, превращаю проверки в понятные чек-листы и помогаю команде видеть состояние качества до выхода в продакшн.",
+    title: "ОБО МНЕ",
+    bio:   "СПЕЦИАЛИЗИРУЮСЬ НА РУЧНОМ ТЕСТИРОВАНИИ, API-ПРОВЕРКАХ И АВТОМАТИЗАЦИИ ДЫМОВЫХ СЦЕНАРИЕВ. БЫСТРО НАХОЖУ СЛАБЫЕ МЕСТА, ПРЕВРАЩАЮ ПРОВЕРКИ В ПОНЯТНЫЕ ЧЕК-ЛИСТЫ И ПОМОГАЮ КОМАНДЕ ВИДЕТЬ СОСТОЯНИЕ КАЧЕСТВА ДО ВЫХОДА В ПРОДАКШН.",
     expertise: [
-      "Функциональное и исследовательское тестирование web и mobile",
-      "API-проверки: Postman, Swagger, контрактные сценарии и статусы",
-      "Регрессия, smoke, чек-листы, баг-репорты и тест-дизайн",
-      "Автоматизация smoke-сценариев: PyTest, Playwright, CI-ready",
+      "ФУНКЦИОНАЛЬНОЕ И ИССЛЕДОВАТЕЛЬСКОЕ ТЕСТИРОВАНИЕ WEB И MOBILE",
+      "API-ПРОВЕРКИ: POSTMAN, SWAGGER, КОНТРАКТНЫЕ СЦЕНАРИИ И СТАТУСЫ",
+      "РЕГРЕССИЯ, SMOKE, ЧЕК-ЛИСТЫ, БАГ-РЕПОРТЫ И ТЕСТ-ДИЗАЙН",
+      "АВТОМАТИЗАЦИЯ SMOKE-СЦЕНАРИЕВ: PYTEST, PLAYWRIGHT, CI-READY",
     ],
     bars: [
-      { name: "Manual QA",           percent: 95 },
-      { name: "API Testing",         percent: 85 },
-      { name: "PyTest / Automation", percent: 70 },
+      { name: "MANUAL QA",           percent: 95 },
+      { name: "API TESTING",         percent: 85 },
+      { name: "PYTEST / AUTOMATION", percent: 70 },
       { name: "SQL",                 percent: 65 },
     ],
   },
@@ -102,44 +102,44 @@ const SITE = {
   projects: [
     {
       id:       1,
-      title:    "Geeks Pro · Web 2026",
+      title:    "GEEKS PRO · WEB 2026",
       category: "web",
       year:     "2026",
-      client:   "Geeks Pro",
-      tags:     ["Test design","Regression","Smoke","DevTools","Cross-browser"],
-      desc:     "Regression-набор для ключевых пользовательских сценариев: авторизация, профиль, уведомления, платёжные состояния.",
+      client:   "GEEKS PRO",
+      tags:     ["TEST DESIGN","REGRESSION","SMOKE","DEVTOOLS","CROSS-BROWSER"],
+      desc:     "REGRESSION-НАБОР ДЛЯ КЛЮЧЕВЫХ ПОЛЬЗОВАТЕЛЬСКИХ СЦЕНАРИЕВ: АВТОРИЗАЦИЯ, ПРОФИЛЬ, УВЕДОМЛЕНИЯ, ПЛАТЁЖНЫЕ СОСТОЯНИЯ.",
       links: [
-        { label: "Сайт",       url: "https://gps.geekspro.kg/" },
-        { label: "Тест-кейсы", url: "https://docs.google.com/spreadsheets/d/1GTyTzE4DppkAjWmrlZNSTx0oo3O37R15/edit?gid=1665610796#gid=1665610796" },
-        { label: "Чек-лист",   url: "https://docs.google.com/spreadsheets/d/1mzbcCmYDxw2LsYtRQubqsqpOotFKwR756BWAa1ZBcBg/edit?gid=1824314626#gid=1824314626" },
+        { label: "САЙТ",       url: "https://gps.geekspro.kg/" },
+        { label: "ТЕСТ-КЕЙСЫ", url: "https://docs.google.com/spreadsheets/d/1GTyTzE4DppkAjWmrlZNSTx0oo3O37R15/edit?gid=1665610796#gid=1665610796" },
+        { label: "ЧЕК-ЛИСТ",   url: "https://docs.google.com/spreadsheets/d/1mzbcCmYDxw2LsYtRQubqsqpOotFKwR756BWAa1ZBcBg/edit?gid=1824314626#gid=1824314626" },
       ],
     },
     {
       id:       2,
-      title:    "API Suite · Placeholder",
+      title:    "API SUITE · PLACEHOLDER",
       category: "api",
       year:     "2025",
-      client:   "Placeholder",
-      tags:     ["PyTest","Postman","CI/CD","Swagger"],
-      desc:     "Заглушка. Добавь данные в config.js → projects[]",
+      client:   "PLACEHOLDER",
+      tags:     ["PYTEST","POSTMAN","CI/CD","SWAGGER"],
+      desc:     "ЗАГЛУШКА. ДОБАВЬ ДАННЫЕ В CONFIG.JS → PROJECTS[]",
       links:    [],
     },
     {
       id:       3,
-      title:    "Smoke Automation · Placeholder",
+      title:    "SMOKE AUTOMATION · PLACEHOLDER",
       category: "automation",
       year:     "2025",
-      client:   "Placeholder",
-      tags:     ["Playwright","PyTest","GitHub Actions"],
-      desc:     "Заглушка. Добавь данные в config.js → projects[]",
+      client:   "PLACEHOLDER",
+      tags:     ["PLAYWRIGHT","PYTEST","GITHUB ACTIONS"],
+      desc:     "ЗАГЛУШКА. ДОБАВЬ ДАННЫЕ В CONFIG.JS → PROJECTS[]",
       links:    [],
     },
   ],
 
   // ─── КОНТАКТ ─────────────────────────────────────────────────
   contact: {
-    email:    "your@email.com",
+    email:    "WSFGCYHHJ@GMAIL.COM",
     telegram: "@imran_wxz",
-    location: "Бишкек, Кыргызстан",
+    location: "БИШКЕК, КЫРГЫЗСТАН",
   },
 };

@@ -20,6 +20,8 @@
   --bg-3:      #161616;
   --bg-card:   #111111;
   --accent:    #ff4d00;
+  --accent-2:  #00c8ff;
+  --accent-3:  #ffe45c;
   --accent-d:  rgba(255,77,0,.12);
   --accent-g:  rgba(255,77,0,.22);
   --t1: #f0f0f0;
@@ -41,12 +43,11 @@
 ═══════════════════════════════════════════ */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--t1);font-family:var(--ff-b);font-size:16px;line-height:1.65;overflow-x:hidden;cursor:none}
+body{background:var(--bg);color:var(--t1);font-family:var(--ff-b);font-size:16px;line-height:1.65;overflow-x:hidden;cursor:none;text-transform:uppercase}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 button{cursor:none;border:none;background:none;font-family:inherit}
 ul{list-style:none}
-input,textarea{font-family:var(--ff-b)}
 
 /* ═══════════════════════════════════════════
    CURSOR
@@ -83,7 +84,7 @@ section{position:relative;z-index:1}
 .nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;right:0;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s}
 .nav-links a:hover{color:var(--t1)}
 .nav-links a:hover::after{transform:scaleX(1)}
-.nav-cta{padding:9px 20px;background:var(--accent);color:#fff;font-family:var(--ff-d);font-size:.85rem;font-weight:600;border-radius:6px;transition:opacity .2s,transform .2s}
+.nav-cta{padding:9px 20px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;font-family:var(--ff-d);font-size:.85rem;font-weight:600;border-radius:6px;transition:opacity .2s,transform .2s;box-shadow:0 10px 26px rgba(255,77,0,.2)}
 .nav-cta:hover{opacity:.88;transform:translateY(-1px)}
 .ham{display:none;flex-direction:column;gap:5px;padding:4px}
 .ham span{display:block;width:22px;height:2px;background:var(--t1);border-radius:2px;transition:all .3s}
@@ -92,7 +93,7 @@ section{position:relative;z-index:1}
    HERO
 ═══════════════════════════════════════════ */
 .hero{min-height:100vh;padding-top:var(--nav-h);display:flex;align-items:center}
-.hero-in{display:grid;grid-template-columns:1fr 400px;gap:60px;align-items:center;padding:60px 0}
+.hero-in{display:grid;grid-template-columns:1fr 400px;gap:60px;align-items:center;padding:60px 0;width:100%;position:relative;z-index:2}
 .h-badge{
   display:inline-flex;align-items:center;gap:8px;padding:5px 14px;
   background:var(--accent-d);border:1px solid rgba(255,77,0,.28);border-radius:100px;
@@ -101,7 +102,7 @@ section{position:relative;z-index:1}
 .h-badge::before{content:'';width:6px;height:6px;background:var(--accent);border-radius:50%;animation:pdot 1.6s ease infinite}
 @keyframes pdot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.65)}}
 .h-name{font-family:var(--ff-d);font-size:clamp(2.2rem,4.5vw,3.6rem);font-weight:700;letter-spacing:-.03em;line-height:1.1;margin-bottom:10px}
-.h-role{font-family:var(--ff-d);font-size:clamp(1.2rem,2.5vw,1.9rem);font-weight:500;color:var(--accent);min-height:2.4rem;margin-bottom:14px}
+.h-role{font-family:var(--ff-d);font-size:clamp(1.2rem,2.5vw,1.9rem);font-weight:500;color:var(--accent-2);min-height:2.4rem;margin-bottom:14px;text-shadow:0 0 24px rgba(0,200,255,.22)}
 .typed-cursor{color:var(--accent)}
 .h-tag{font-size:.98rem;color:var(--t2);max-width:480px;margin-bottom:24px;line-height:1.7}
 .h-pills{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:28px}
@@ -110,7 +111,7 @@ section{position:relative;z-index:1}
 .h-btns{display:flex;gap:12px;margin-bottom:44px;flex-wrap:wrap}
 .btn-p{
   display:inline-flex;align-items:center;gap:7px;padding:12px 26px;
-  background:var(--accent);color:#fff;font-family:var(--ff-d);font-weight:600;
+  background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;font-family:var(--ff-d);font-weight:600;
   font-size:.88rem;border-radius:8px;transition:transform .2s,box-shadow .2s
 }
 .btn-p:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(255,77,0,.38)}
@@ -212,7 +213,7 @@ section{position:relative;z-index:1}
 .bar-item{margin-bottom:15px}
 .bar-hd{display:flex;justify-content:space-between;font-size:.78rem;color:var(--t2);margin-bottom:6px;font-family:var(--ff-m)}
 .bar-tr{height:2.5px;background:var(--bg-3);border-radius:2px;overflow:hidden}
-.bar-fi{height:100%;background:linear-gradient(90deg,var(--accent),#ff8c40);border-radius:2px;width:0%;transition:width 1.3s cubic-bezier(.22,1,.36,1)}
+.bar-fi{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2),var(--accent-3));border-radius:2px;width:0%;transition:width 1.3s cubic-bezier(.22,1,.36,1)}
 
 /* ═══════════════════════════════════════════
    PROJECTS
@@ -292,24 +293,28 @@ section{position:relative;z-index:1}
 .soc-btn:hover{border-color:var(--accent);background:var(--accent-d)}
 .soc-btn svg{width:17px;height:17px;stroke:var(--t2);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:stroke .25s}
 .soc-btn:hover svg{stroke:var(--accent)}
-/* Form */
-.ct-form{display:flex;flex-direction:column;gap:13px}
-.f-row{display:grid;grid-template-columns:1fr 1fr;gap:13px}
-.f-field{display:flex;flex-direction:column;gap:5px}
-.f-field label{font-family:var(--ff-m);font-size:.68rem;color:var(--t3);letter-spacing:.05em}
-.f-field input,.f-field textarea{
-  background:var(--bg-card);border:1px solid var(--bdr);border-radius:8px;
-  padding:11px 13px;color:var(--t1);font-size:.88rem;outline:none;transition:border-color .25s;width:100%
+/* Direct contact panel */
+.ct-direct{
+  background:var(--bg-card);border:1px solid var(--bdr);border-radius:var(--rl);
+  padding:26px;position:relative;overflow:hidden;min-height:100%
 }
-.f-field input:focus,.f-field textarea:focus{border-color:var(--accent)}
-.f-field textarea{resize:vertical;min-height:118px}
-.f-sub{
-  padding:13px 26px;background:var(--accent);color:#fff;font-family:var(--ff-d);
-  font-weight:600;font-size:.88rem;border-radius:8px;transition:opacity .2s,transform .2s;cursor:none;align-self:flex-start
+.ct-direct::before{
+  content:'';position:absolute;inset:-1px;
+  background:linear-gradient(120deg,transparent,rgba(255,77,0,.22),transparent);
+  transform:translateX(-100%);animation:panelSweep 4s ease-in-out infinite
 }
-.f-sub:hover{opacity:.88;transform:translateY(-2px)}
-.f-msg{font-family:var(--ff-m);font-size:.78rem;color:#22c55e;display:none}
-.f-msg.show{display:block}
+@keyframes panelSweep{0%,45%{transform:translateX(-110%)}70%,100%{transform:translateX(110%)}}
+.ct-direct h3{position:relative;font-family:var(--ff-d);font-size:1.35rem;margin-bottom:10px}
+.ct-direct p{position:relative;color:var(--t2);font-size:.9rem;margin-bottom:18px}
+.ct-links{position:relative;display:grid;gap:12px}
+.ct-link{
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+  min-height:52px;padding:13px 15px;background:var(--bg-3);border:1px solid var(--bdr);
+  border-radius:10px;font-family:var(--ff-d);font-weight:700;font-size:.88rem;
+  transition:border-color .25s,background .25s,transform .25s,box-shadow .25s
+}
+.ct-link:hover{border-color:var(--accent);background:var(--accent-d);transform:translateX(6px);box-shadow:0 14px 34px rgba(255,77,0,.18)}
+.ct-link span{font-family:var(--ff-m);color:var(--accent)}
 
 /* ═══════════════════════════════════════════
    FOOTER
@@ -324,6 +329,8 @@ footer{padding:28px 0;border-top:1px solid var(--bdr);background:var(--bg);posit
    RESPONSIVE
 ═══════════════════════════════════════════ */
 @media(max-width:980px){
+  .hero{min-height:auto;align-items:flex-start}
+  .hero-in{padding:34px 0 72px;gap:34px}
   .hero-in{grid-template-columns:1fr}
   .hero-vis{order:-1}
   .av-wrap{width:260px;height:260px}
@@ -331,14 +338,16 @@ footer{padding:28px 0;border-top:1px solid var(--bdr);background:var(--bg);posit
   .ab-in{grid-template-columns:1fr}
   .pj-grid{grid-template-columns:1fr 1fr}
   .ct-in{grid-template-columns:1fr}
-  .f-row{grid-template-columns:1fr}
   .nav-links{display:none}
   .ham{display:flex}
 }
 @media(max-width:600px){
+  .wrap{padding:0 18px}
+  .hero-in{padding:26px 0 60px;gap:28px}
   .sk-grid{grid-template-columns:1fr}
   .pj-grid{grid-template-columns:1fr}
-  .h-stats{gap:20px}
+  .h-stats{gap:20px;flex-wrap:wrap}
+  .ct-link{align-items:flex-start;flex-direction:column;gap:6px}
   .ft-in{flex-direction:column;gap:10px;text-align:center}
 }
 
@@ -382,6 +391,41 @@ footer{padding:28px 0;border-top:1px solid var(--bdr);background:var(--bg);posit
 /* Scroll progress bar */
 #spbar{position:fixed;top:0;left:0;height:2px;background:var(--accent);z-index:9999;width:0%;transition:width .1s linear;box-shadow:0 0 8px var(--accent)}
 
+/* Back to top */
+#backTop{
+  position:fixed;right:24px;bottom:24px;z-index:130;width:48px;height:48px;
+  display:grid;place-items:center;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;
+  font-family:var(--ff-m);font-size:.82rem;font-weight:700;opacity:0;pointer-events:none;
+  transform:translateY(18px) scale(.9);transition:opacity .25s,transform .25s,box-shadow .25s;
+  box-shadow:0 0 0 rgba(255,77,0,0)
+}
+#backTop.show{opacity:1;pointer-events:auto;transform:translateY(0) scale(1);box-shadow:0 14px 34px rgba(255,77,0,.32)}
+#backTop:hover{transform:translateY(-3px) scale(1.05)}
+
+/* More motion layers */
+.motion-lanes{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;opacity:.38}
+.lane{position:absolute;left:-30%;width:160%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,77,0,.34),transparent);animation:laneRush 4.8s linear infinite}
+.lane:nth-child(1){top:18%;animation-delay:-.2s}
+.lane:nth-child(2){top:42%;animation-delay:-1.4s}
+.lane:nth-child(3){top:67%;animation-delay:-2.8s}
+.lane:nth-child(4){top:86%;animation-delay:-3.8s}
+.lane:nth-child(even){background:linear-gradient(90deg,transparent,rgba(0,200,255,.28),transparent)}
+@keyframes laneRush{0%{transform:translateX(-22%) scaleX(.25);opacity:0}15%,65%{opacity:1}100%{transform:translateX(22%) scaleX(1);opacity:0}}
+.scan-v{
+  position:fixed;top:0;bottom:0;width:2px;left:50%;z-index:0;pointer-events:none;
+  background:linear-gradient(180deg,transparent,var(--accent),transparent);
+  box-shadow:0 0 18px rgba(255,77,0,.35);opacity:.3;animation:vscan 6s ease-in-out infinite
+}
+@keyframes vscan{0%,100%{transform:translateX(-48vw)}50%{transform:translateX(48vw)}}
+.kinetic-dot{
+  position:fixed;width:7px;height:7px;border-radius:50%;background:var(--accent);
+  z-index:0;pointer-events:none;box-shadow:0 0 18px var(--accent);opacity:.45;animation:dotOrbit 9s ease-in-out infinite
+}
+.kinetic-dot.d1{left:10%;top:20%}
+.kinetic-dot.d2{left:82%;top:34%;animation-delay:-3s}
+.kinetic-dot.d3{left:28%;top:82%;animation-delay:-6s}
+@keyframes dotOrbit{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(34px,-18px) scale(1.5)}66%{transform:translate(-22px,30px) scale(.72)}}
+
 /* Spotlight on cards */
 .sk-card .spot,.pj-card .spot{position:absolute;width:280px;height:280px;background:radial-gradient(circle,rgba(255,77,0,.12),transparent 70%);border-radius:50%;pointer-events:none;transform:translate(-50%,-50%);opacity:0;transition:opacity .3s;z-index:0}
 .sk-card:hover .spot,.pj-card:hover .spot{opacity:1}
@@ -393,6 +437,26 @@ footer{padding:28px 0;border-top:1px solid var(--bdr);background:var(--bg);posit
 /* Float items in hero */
 @keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 .av-wrap{animation:floatY 4s ease-in-out infinite}
+.h-badge,.pill,.mq-item,.sk-card,.pj-card,.ct-item,.ct-link{animation:microPulse 6s ease-in-out infinite}
+@keyframes microPulse{0%,100%{filter:saturate(1)}50%{filter:saturate(1.28)}}
+
+body.anim-fallback #nav,
+body.anim-fallback .h-badge,
+body.anim-fallback #h-name,
+body.anim-fallback .h-role,
+body.anim-fallback #h-tag,
+body.anim-fallback .pill,
+body.anim-fallback .h-btns a,
+body.anim-fallback #h-stats > div,
+body.anim-fallback .av-wrap,
+body.anim-fallback .orb,
+body.anim-fallback .sk-card,
+body.anim-fallback .ab-img-w,
+body.anim-fallback .ab-text > *,
+body.anim-fallback .pj-card,
+body.anim-fallback .ct-info > *,
+body.anim-fallback .ct-direct,
+body.anim-fallback .s-label{opacity:1 !important}
 
 /* Pulse ring on avatar */
 .av-pulse{position:absolute;inset:-20px;border:1px solid rgba(255,77,0,.15);border-radius:50%;animation:pring 3s ease-out infinite}
@@ -417,19 +481,26 @@ footer{padding:28px 0;border-top:1px solid var(--bdr);background:var(--bg);posit
 <div class="orb orb1"></div>
 <div class="orb orb2"></div>
 <div id="spbar"></div>
+<div class="motion-lanes" aria-hidden="true">
+  <span class="lane"></span><span class="lane"></span><span class="lane"></span><span class="lane"></span>
+</div>
+<div class="scan-v" aria-hidden="true"></div>
+<span class="kinetic-dot d1" aria-hidden="true"></span>
+<span class="kinetic-dot d2" aria-hidden="true"></span>
+<span class="kinetic-dot d3" aria-hidden="true"></span>
 
 <!-- NAV -->
 <nav class="nav" id="nav">
   <div class="wrap nav-in">
     <div class="logo">IN<span>.</span></div>
     <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#skills">Навыки</a></li>
-      <li><a href="#about">Обо мне</a></li>
-      <li><a href="#projects">Проекты</a></li>
-      <li><a href="#contact">Контакт</a></li>
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#skills">НАВЫКИ</a></li>
+      <li><a href="#about">ОБО МНЕ</a></li>
+      <li><a href="#projects">ПРОЕКТЫ</a></li>
+      <li><a href="#contact">КОНТАКТ</a></li>
     </ul>
-    <a href="#contact" class="nav-cta">Написать</a>
+    <a href="#contact" class="nav-cta">НАПИСАТЬ</a>
     <button class="ham" id="ham" aria-label="menu">
       <span></span><span></span><span></span>
     </button>
@@ -438,11 +509,11 @@ footer{padding:28px 0;border-top:1px solid var(--bdr);background:var(--bg);posit
 
 <!-- MOBILE NAV -->
 <div class="mob-nav" id="mob-nav">
-  <a href="#home"     onclick="closeMob()">Home</a>
-  <a href="#skills"   onclick="closeMob()">Навыки</a>
-  <a href="#about"    onclick="closeMob()">Обо мне</a>
-  <a href="#projects" onclick="closeMob()">Проекты</a>
-  <a href="#contact"  onclick="closeMob()">Контакт</a>
+  <a href="#home"     onclick="closeMob()">HOME</a>
+  <a href="#skills"   onclick="closeMob()">НАВЫКИ</a>
+  <a href="#about"    onclick="closeMob()">ОБО МНЕ</a>
+  <a href="#projects" onclick="closeMob()">ПРОЕКТЫ</a>
+  <a href="#contact"  onclick="closeMob()">КОНТАКТ</a>
 </div>
 
 <!-- HERO -->
@@ -455,8 +526,8 @@ footer{padding:28px 0;border-top:1px solid var(--bdr);background:var(--bg);posit
       <p class="h-tag" id="h-tag"></p>
       <div class="h-pills" id="h-pills"></div>
       <div class="h-btns">
-        <a href="#projects" class="btn-p">Посмотреть проекты →</a>
-        <a href="#contact"  class="btn-s">Написать</a>
+        <a href="#projects" class="btn-p">ПОСМОТРЕТЬ ПРОЕКТЫ →</a>
+        <a href="#contact"  class="btn-s">НАПИСАТЬ</a>
       </div>
       <div class="h-stats" id="h-stats"></div>
     </div>
@@ -476,7 +547,7 @@ footer{padding:28px 0;border-top:1px solid var(--bdr);background:var(--bg);posit
         <span class="bug-b">NULL_REF</span>
         <span class="bug-b">400_ERR</span>
         <div class="status-b">
-          <span class="dot"></span>Online · Бишкек
+          <span class="dot"></span>ONLINE · БИШКЕК
         </div>
       </div>
     </div>
@@ -490,8 +561,8 @@ footer{padding:28px 0;border-top:1px solid var(--bdr);background:var(--bg);posit
 <section id="skills">
   <div class="wrap">
     <div class="s-head">
-      <div class="s-label">// Навыки</div>
-      <h2 class="s-title">Что я умею</h2>
+      <div class="s-label">// НАВЫКИ</div>
+      <h2 class="s-title">ЧТО Я УМЕЮ</h2>
     </div>
     <div class="sk-grid" id="sk-grid"></div>
   </div>
@@ -505,15 +576,14 @@ footer{padding:28px 0;border-top:1px solid var(--bdr);background:var(--bg);posit
         <div class="ab-img">
           <div class="ab-ph" id="ab-ph"></div>
         </div>
-        <div class="ab-avail">OPEN TO WORK</div>
       </div>
       <div class="ab-text">
-        <div class="s-label">// обо мне</div>
+        <div class="s-label">// ОБО МНЕ</div>
         <h2 id="ab-title"></h2>
         <p class="ab-bio" id="ab-bio"></p>
         <ul class="ab-exp" id="ab-exp"></ul>
         <div class="ab-bars" id="ab-bars"></div>
-        <a href="#" class="btn-p" id="cv-link">Скачать резюме ↓</a>
+        <a href="#" class="btn-p" id="cv-link">СКАЧАТЬ РЕЗЮМЕ ↓</a>
       </div>
     </div>
   </div>
@@ -523,8 +593,8 @@ footer{padding:28px 0;border-top:1px solid var(--bdr);background:var(--bg);posit
 <section id="projects">
   <div class="wrap">
     <div class="s-head">
-      <div class="s-label">// портфолио</div>
-      <h2 class="s-title">Проекты</h2>
+      <div class="s-label">// ПОРТФОЛИО</div>
+      <h2 class="s-title">ПРОЕКТЫ</h2>
     </div>
     <div class="pf-filters" id="pf-filters"></div>
     <div class="pj-grid" id="pj-grid"></div>
@@ -536,34 +606,17 @@ footer{padding:28px 0;border-top:1px solid var(--bdr);background:var(--bg);posit
   <div class="wrap">
     <div class="ct-in">
       <div class="ct-info">
-        <div class="s-label">// написать</div>
-        <h2>Связаться<br/>со мной</h2>
-        <p>Ищете QA-инженера или хотите обсудить проект? Напишите — отвечу быстро.</p>
+        <div class="s-label">// НАПИСАТЬ</div>
+        <h2>СВЯЗАТЬСЯ<br/>СО МНОЙ</h2>
+        <p>ИЩЕТЕ QA-ИНЖЕНЕРА ИЛИ ХОТИТЕ ОБСУДИТЬ ПРОЕКТ? НАПИШИТЕ — ОТВЕЧУ БЫСТРО.</p>
         <div class="ct-items" id="ct-items"></div>
         <div class="ct-soc" id="ct-soc"></div>
       </div>
-      <form class="ct-form" id="ct-form" onsubmit="return false">
-        <div class="f-row">
-          <div class="f-field">
-            <label>ИМЯ</label>
-            <input type="text" placeholder="Ваше имя" />
-          </div>
-          <div class="f-field">
-            <label>EMAIL</label>
-            <input type="email" placeholder="your@email.com" />
-          </div>
-        </div>
-        <div class="f-field">
-          <label>ТЕМА</label>
-          <input type="text" placeholder="Тема сообщения" />
-        </div>
-        <div class="f-field">
-          <label>СООБЩЕНИЕ</label>
-          <textarea placeholder="Расскажите о проекте..."></textarea>
-        </div>
-        <button type="button" class="f-sub" onclick="submitForm()">Отправить →</button>
-        <div class="f-msg" id="f-msg">✓ Сообщение отправлено! Свяжусь с вами.</div>
-      </form>
+      <div class="ct-direct">
+        <h3>БЕЗ ФОРМ</h3>
+        <p>ВСЕ ПОЛЯ УБРАНЫ. ДЛЯ СВЯЗИ ИСПОЛЬЗУЙТЕ ПРЯМЫЕ ССЫЛКИ.</p>
+        <div class="ct-links" id="ct-links"></div>
+      </div>
     </div>
   </div>
 </section>
@@ -575,11 +628,12 @@ footer{padding:28px 0;border-top:1px solid var(--bdr);background:var(--bg);posit
     <div class="ft-copy" id="ft-copy"></div>
   </div>
 </footer>
+<button id="backTop" type="button" aria-label="НАВЕРХ">↑</button>
 
 <!-- LIBS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
 <script src="config.js"></script>
 
 <script>
@@ -600,22 +654,25 @@ const IC = {
   map:      `<svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>`,
 };
 
+const U = (value) => String(value ?? '').toLocaleUpperCase('ru-RU');
+
 // ═══════════════════════════════════════
 //  RENDER
 // ═══════════════════════════════════════
 function render() {
-  document.title = SITE.name + ' — QA Engineer';
+  document.title = U(SITE.name + ' — QA Engineer');
 
   // Hero
-  document.getElementById('h-name').textContent = SITE.name;
-  document.getElementById('h-tag').textContent   = SITE.tagline;
-  document.getElementById('av-ph').textContent   = SITE.initials;
-  document.getElementById('ab-ph').textContent   = SITE.initials;
-  document.getElementById('ab-title').textContent = SITE.about.title;
-  document.getElementById('ab-bio').textContent   = SITE.about.bio;
+  document.getElementById('h-name').textContent = U(SITE.name);
+  document.getElementById('typed-el').textContent = U(SITE.roles[0] || 'QA ENGINEER');
+  document.getElementById('h-tag').textContent   = U(SITE.tagline);
+  document.getElementById('av-ph').textContent   = U(SITE.initials);
+  document.getElementById('ab-ph').textContent   = U(SITE.initials);
+  document.getElementById('ab-title').textContent = U(SITE.about.title);
+  document.getElementById('ab-bio').textContent   = U(SITE.about.bio);
   document.getElementById('cv-link').href         = SITE.cv;
   document.getElementById('ft-copy').textContent  =
-    '© ' + new Date().getFullYear() + ' ' + SITE.name + '. Все права защищены.';
+    U('© ' + new Date().getFullYear() + ' ' + SITE.name + '. Все права защищены.');
 
   // Avatar
   if (SITE.avatar) {
@@ -626,11 +683,11 @@ function render() {
   }
 
   // Hero pills
-  const pills = ['Manual QA','API Testing','PyTest','Postman','SQL','DevTools','CI/CD','Regression'];
+  const pills = ['MANUAL QA','API TESTING','PYTEST','POSTMAN','SQL','DEVTOOLS','CI/CD','REGRESSION'];
   const pillsEl = document.getElementById('h-pills');
   pills.forEach(t => {
     const s = document.createElement('span');
-    s.className = 'pill'; s.textContent = t;
+    s.className = 'pill'; s.textContent = U(t);
     pillsEl.appendChild(s);
   });
 
@@ -638,7 +695,7 @@ function render() {
   const statsEl = document.getElementById('h-stats');
   SITE.stats.forEach((s,i) => {
     const d = document.createElement('div');
-    d.innerHTML = `<div class="h-sv" data-target="${s.value}" data-suffix="${s.suffix}">0${s.suffix}</div><div class="h-sl">${s.label}</div>`;
+    d.innerHTML = `<div class="h-sv" data-target="${s.value}" data-suffix="${s.suffix}">0${s.suffix}</div><div class="h-sl">${U(s.label)}</div>`;
     statsEl.appendChild(d);
   });
 
@@ -648,7 +705,7 @@ function render() {
   const mkRow = (cls) => {
     const r = document.createElement('div');
     r.className = 'mq-row ' + cls;
-    r.innerHTML = items.map(t => `<span class="mq-item">${t}</span>`).join('');
+    r.innerHTML = items.map(t => `<span class="mq-item">${U(t)}</span>`).join('');
     return r;
   };
   mqEl.appendChild(mkRow('mq-row--l'));
@@ -660,15 +717,15 @@ function render() {
     skEl.innerHTML += `
       <div class="sk-card">
         <div class="sk-ico">${IC[s.icon] || IC.search}</div>
-        <h3>${s.title}</h3>
-        <p>${s.desc}</p>
+        <h3>${U(s.title)}</h3>
+        <p>${U(s.desc)}</p>
       </div>`;
   });
 
   // About expertise
   const expEl = document.getElementById('ab-exp');
   SITE.about.expertise.forEach(e => {
-    expEl.innerHTML += `<li>${e}</li>`;
+    expEl.innerHTML += `<li>${U(e)}</li>`;
   });
 
   // Bars
@@ -676,19 +733,19 @@ function render() {
   SITE.about.bars.forEach(b => {
     barsEl.innerHTML += `
       <div class="bar-item">
-        <div class="bar-hd"><span>${b.name}</span><span>${b.percent}%</span></div>
+        <div class="bar-hd"><span>${U(b.name)}</span><span>${b.percent}%</span></div>
         <div class="bar-tr"><div class="bar-fi" data-pct="${b.percent}"></div></div>
       </div>`;
   });
 
   // Project filters
   const cats = ['all', ...new Set(SITE.projects.map(p => p.category))];
-  const labels = { all:'Все', web:'Web', api:'API', automation:'Automation' };
+  const labels = { all:'ВСЕ', web:'WEB', api:'API', automation:'AUTOMATION' };
   const filEl = document.getElementById('pf-filters');
   cats.forEach(cat => {
     const b = document.createElement('button');
     b.className = 'f-btn' + (cat==='all'?' on':'');
-    b.textContent = labels[cat] || cat;
+    b.textContent = U(labels[cat] || cat);
     b.addEventListener('click', () => {
       document.querySelectorAll('.f-btn').forEach(x => x.classList.remove('on'));
       b.classList.add('on');
@@ -701,8 +758,8 @@ function render() {
   const pjEl = document.getElementById('pj-grid');
   SITE.projects.forEach(p => {
     const ov = p.links.length
-      ? p.links.map(l => `<a href="${l.url}" target="_blank" rel="noopener">${l.label}</a>`).join('')
-      : '<span style="font-family:var(--ff-m);font-size:.7rem;color:var(--t2)">— Скоро —</span>';
+      ? p.links.map(l => `<a href="${l.url}" target="_blank" rel="noopener">${U(l.label)}</a>`).join('')
+      : '<span style="font-family:var(--ff-m);font-size:.7rem;color:var(--t2)">— СКОРО —</span>';
     pjEl.innerHTML += `
       <div class="pj-card" data-cat="${p.category}">
         <div class="pj-vis">
@@ -711,10 +768,10 @@ function render() {
           <div class="pj-ov">${ov}</div>
         </div>
         <div class="pj-body">
-          <div class="pj-meta"><span class="pj-yr">${p.year}</span><span class="pj-cl"> · ${p.client}</span></div>
-          <h3>${p.title}</h3>
-          <p>${p.desc}</p>
-          <div class="pj-tags">${p.tags.map(t=>`<span class="pj-tag">${t}</span>`).join('')}</div>
+          <div class="pj-meta"><span class="pj-yr">${U(p.year)}</span><span class="pj-cl"> · ${U(p.client)}</span></div>
+          <h3>${U(p.title)}</h3>
+          <p>${U(p.desc)}</p>
+          <div class="pj-tags">${p.tags.map(t=>`<span class="pj-tag">${U(t)}</span>`).join('')}</div>
         </div>
       </div>`;
   });
@@ -729,7 +786,7 @@ function render() {
     ctEl.innerHTML += `
       <div class="ct-item">
         <div class="ct-ico">${IC[c.icon]}</div>
-        <div><div class="ct-lbl">${c.lbl}</div><div class="ct-val">${c.val}</div></div>
+        <div><div class="ct-lbl">${U(c.lbl)}</div><div class="ct-val">${U(c.val)}</div></div>
       </div>`;
   });
 
@@ -738,6 +795,17 @@ function render() {
   Object.entries(SITE.social).forEach(([k,url]) => {
     if (IC[k]) socEl.innerHTML +=
       `<a href="${url}" class="soc-btn" target="_blank" rel="noopener" aria-label="${k}">${IC[k]}</a>`;
+  });
+
+  // Direct contact links
+  const directEl = document.getElementById('ct-links');
+  [
+    {label:'EMAIL',    url:SITE.social.email,    value:SITE.contact.email},
+    {label:'TELEGRAM', url:SITE.social.telegram, value:SITE.contact.telegram},
+    {label:'GITHUB',   url:SITE.social.github,   value:'GITHUB'},
+  ].forEach(l => {
+    if (!l.url || l.url === '#') return;
+    directEl.innerHTML += `<a class="ct-link" href="${l.url}" target="_blank" rel="noopener">${U(l.label)} · ${U(l.value)} <span>→</span></a>`;
   });
 }
 
@@ -748,15 +816,6 @@ function filterPj(cat) {
   document.querySelectorAll('.pj-card').forEach(c => {
     c.classList.toggle('hidden', cat !== 'all' && c.dataset.cat !== cat);
   });
-}
-
-// ═══════════════════════════════════════
-//  FORM
-// ═══════════════════════════════════════
-function submitForm() {
-  const msg = document.getElementById('f-msg');
-  msg.classList.add('show');
-  setTimeout(() => msg.classList.remove('show'), 4000);
 }
 
 // ═══════════════════════════════════════
@@ -827,7 +886,11 @@ function initAnim() {
     const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
     document.getElementById('spbar').style.width = pct + '%';
     document.getElementById('nav').classList.toggle('on', window.scrollY > 40);
+    document.getElementById('backTop').classList.toggle('show', window.scrollY > 520);
   }, {passive:true});
+  document.getElementById('backTop').addEventListener('click', () => {
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
 
   // ─ Cursor ─
   const cur = document.getElementById('cur');
@@ -922,7 +985,7 @@ function initAnim() {
   // ─ Typed ─
   if (window.Typed) {
     new Typed('#typed-el', {
-      strings: SITE.roles,
+      strings: SITE.roles.map(U),
       typeSpeed:65, backSpeed:38, backDelay:1800, loop:true,
     });
   }
@@ -978,9 +1041,9 @@ function initAnim() {
     scrollTrigger:{trigger:'#contact', start:'top 78%'},
     x:-44, opacity:0, stagger:.1, duration:.6
   });
-  gsap.from('.ct-form > *', {
+  gsap.from('.ct-direct', {
     scrollTrigger:{trigger:'#contact', start:'top 78%'},
-    y:28, opacity:0, stagger:.08, duration:.55
+    y:28, opacity:0, duration:.55
   });
 
   // ─ Parallax hero avatar ─
@@ -1011,10 +1074,9 @@ function initAnim() {
 // ═══════════════════════════════════════
 //  BOOT
 // ═══════════════════════════════════════
-document.addEventListener('DOMContentLoaded', () => {
-  render();
-  initAnim();
-});
+render();
+initAnim();
+setTimeout(() => document.body.classList.add('anim-fallback'), 2600);
 </script>
 </body>
 </html>
