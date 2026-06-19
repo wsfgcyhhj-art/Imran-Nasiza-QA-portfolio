@@ -1,10 +1,10 @@
-// ═══════════════════════════════════════════════════════════════
+ // ═══════════════════════════════════════════════════════════════
 //  ✏️  PORTFOLIO.CONFIG.JS — ВСЁ РЕДАКТИРУЙ ЗДЕСЬ
 //  Сохрани → git push → Vercel задеплоит за ~30 секунд.
 // ═══════════════════════════════════════════════════════════════
-
+ 
 const SITE = {
-
+ 
   site: {
     nav: [
       { label: "Навыки",   href: "#skills"   },
@@ -13,7 +13,7 @@ const SITE = {
       { label: "Контакт",  href: "#contact"  },
     ],
   },
-
+ 
   profile: {
     name:        "Имран Насиза",
     initials:    "ИН",
@@ -23,17 +23,17 @@ const SITE = {
     contactText: "Ищете QA-инженера или хотите обсудить проект? Напишите — отвечу быстро.",
     avatar:      "",      // ← URL фото (https://...) или оставь "" для плейсхолдера
     cv:          "#",     // ← ссылка на PDF резюме
-
+ 
     contacts: [
       { label: "Email",    value: "wsfgcyhhj@gmail.com",            href: "mailto:wsfgcyhhj@gmail.com" },
       { label: "Telegram", value: "@imran_wxz",                     href: "https://t.me/imran_wxz" },
       { label: "GitHub",   value: "wsfgcyhhj-art",                  href: "https://github.com/wsfgcyhhj-art" },
     ],
   },
-
+ 
   // Бейджи на герое (зелёные) — оставь [] чтобы убрать совсем
   heroBadges: [],
-
+ 
   // Бегущая строка
   ticker: [
     "Manual QA","API Testing","PyTest","Postman","SQL",
@@ -41,14 +41,14 @@ const SITE = {
     "Bug Report","Test Case","Checklist","Jira","Swagger",
     "Cross-browser","Mobile Testing","Test Design","Selenium",
   ],
-
+ 
   // Статистика в hero
   stats: [
     { value: 50, suffix: "+", label: "Найдено багов"   },
     { value:  3, suffix: "+", label: "Проекта"         },
     { value:  7, suffix: "+", label: "QA инструментов" },
   ],
-
+ 
   // Карточки "Что я умею"
   skills: [
     { icon:"search",   title:"Manual QA",    desc:"Функциональное, исследовательское и регрессионное тестирование web и mobile продуктов" },
@@ -57,8 +57,11 @@ const SITE = {
     { icon:"db",       title:"SQL",          desc:"Написание запросов, проверка данных в БД, поиск аномалий и дублей" },
     { icon:"devtools", title:"DevTools",     desc:"Анализ сети, консоль, storage, перехват и проверка запросов в браузере" },
     { icon:"loop",     title:"Regression",   desc:"Чек-листы, баг-репорты, тест-дизайн, тест-кейсы и smoke-прогоны перед релизом" },
+    { icon:"bot",      title:"Selenium",     desc:"Автоматизация UI-тестов в браузере, локаторы, ожидания, Page Object Model" },
+    { icon:"devtools", title:"Apache JMeter",desc:"Нагрузочное и стресс-тестирование API и web-сервисов, анализ отклика под нагрузкой" },
+    { icon:"db",       title:"Android Studio",desc:"Тестирование мобильных приложений, эмуляторы, Logcat, отладка Android-сборок" },
   ],
-
+ 
   // "Обо мне" → список направлений
   focus: [
     "Функциональное и исследовательское тестирование web и mobile",
@@ -66,7 +69,7 @@ const SITE = {
     "Регрессия, smoke, чек-листы, баг-репорты и тест-дизайн",
     "Автоматизация smoke-сценариев: PyTest, Playwright, CI-ready",
   ],
-
+ 
   // Прогресс-бары в "Обо мне"
   bars: [
     { name:"Manual QA",           percent:95 },
@@ -74,7 +77,7 @@ const SITE = {
     { name:"PyTest / Automation", percent:70 },
     { name:"SQL",                 percent:65 },
   ],
-
+ 
   // Проекты. type: Web | API | Mobile | Automation | Process
   projects: [
     {
@@ -101,3 +104,4 @@ const SITE = {
     },
   ],
 };
+ 
