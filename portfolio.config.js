@@ -1,4 +1,4 @@
- // ═══════════════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════════════
 //  ✏️  PORTFOLIO.CONFIG.JS — ВСЁ РЕДАКТИРУЙ ЗДЕСЬ
 //  Сохрани → git push → Vercel задеплоит за ~30 секунд.
 // ═══════════════════════════════════════════════════════════════
@@ -27,9 +27,8 @@ const SITE = {
     contacts: [
       { label: "Email",    value: "wsfgcyhhj@gmail.com",            href: "mailto:wsfgcyhhj@gmail.com" },
       { label: "Telegram", value: "@imran_wxz",                     href: "https://t.me/imran_wxz" },
-      { label: "GitHub",   value: "wsfgcyhhj-art",                  href: "https://github.com/wsfgcyhhj-art" 
-      { label: "LinkedI",   value: "Imran Nasiza",                  href: "http://linkedin.com/in/imran-nasiza-9872053b9/"
-      },
+      { label: "GitHub",   value: "wsfgcyhhj-art",                  href: "https://github.com/wsfgcyhhj-art" },
+      { label: "LinkedIn", value: "Imran Nasiza",                   href: "http://linkedin.com/in/imran-nasiza-9872053b9/" },
     ],
   },
  
@@ -53,7 +52,7 @@ const SITE = {
   // Карточки "Что я умею"
   skills: [
     { icon:"search",   title:"Manual QA",    desc:"Функциональное, исследовательское и регрессионное тестирование web и mobile продуктов" },
-    { icon:"api",      title:"API Testing",  desc:"Postman, Swagger, контрактные сценарии, статус-коды и валидация схем ответов" },
+    { icon:"api",      title:"API Testing",  desc:"Postman, Swagger, контрактные сценарии, статус-коды и валидация燬хем ответов" },
     { icon:"bot",      title:"Automation",   desc:"Smoke-сценарии на PyTest и Playwright, CI-ready пайплайны и GitHub Actions" },
     { icon:"db",       title:"SQL",          desc:"Написание запросов, проверка данных в БД, поиск аномалий и дублей" },
     { icon:"devtools", title:"DevTools",     desc:"Анализ сети, консоль, storage, перехват и проверка запросов в браузере" },
@@ -94,7 +93,5 @@ const SITE = {
         { label: "Чек-лист",   href: "https://docs.google.com/spreadsheets/d/1mzbcCmYDxw2LsYtRQubqsqpOotFKwR756BWAa1ZBcBg/edit?gid=1824314626#gid=1824314626" },
       ],
     },
-    
-  ],
-};
- 
+  ], // ← Закрыли массив проектов
+}; // ← Закрыли объект SITE
