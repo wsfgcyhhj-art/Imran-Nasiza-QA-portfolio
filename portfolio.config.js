@@ -27,7 +27,9 @@ const SITE = {
     contacts: [
       { label: "Email",    value: "wsfgcyhhj@gmail.com",            href: "mailto:wsfgcyhhj@gmail.com" },
       { label: "Telegram", value: "@imran_wxz",                     href: "https://t.me/imran_wxz" },
-      { label: "GitHub",   value: "wsfgcyhhj-art",                  href: "https://github.com/wsfgcyhhj-art" },
+      { label: "GitHub",   value: "wsfgcyhhj-art",                  href: "https://github.com/wsfgcyhhj-art" 
+      { label: "LinkedI",   value: "Imran Nasiza",                  href: "http://linkedin.com/in/imran-nasiza-9872053b9/"
+      },
     ],
   },
  
@@ -41,7 +43,6 @@ const SITE = {
     "Bug Report","Test Case","Checklist","Jira","Swagger",
     "Cross-browser","Mobile Testing","Test Design","Selenium",
   ],
- 
   // Статистика в hero
   stats: [
     { value: 50, suffix: "+", label: "Найдено багов"   },
